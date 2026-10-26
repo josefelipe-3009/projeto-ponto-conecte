@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ponto ConEcTE - Da formação à oportunidade</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ================= CABEÇALHO ================= -->
+  <header class="header">
+    <div class="header__container">
+
+      <a href="#" class="logo" aria-label="Ponto ConEcTE - página inicial">
+        <!-- Troque este SVG por <img src="images/logo.png" alt="Ponto ConEcTE"> se tiver o arquivo original -->
+       <img>
+          <path d="M26 56V28l3-6h6l3 6v28"/>
+          <path d="M27 22v-6h10v6"/>
+          <path d="M29 16l3-6 3 6"/>
+          <path d="M26 36h12M26 46h12"/>
+          <path d="M14 56V40l5-4 5 4v16"/>
+          <path d="M42 56V42l5-3 5 3v14"/>
+          <path d="M4 60c6 0 6-3 12-3s6 3 12 3 6-3 12-3 6 3 12 3 6-3 8-3"/>
+          <path class="logo__star" d="M48 8l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="#ffc83d" stroke="none"/>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__name">Ponto</span>
+          <span class="logo__name logo__name--blue">ConEcTE</span>
+          <span class="logo__slogan">Da formação à oportunidade</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#" class="nav__link nav__link--active">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>
+          Início
+        </a>
+        <a href="#sobre" class="nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><path d="M12 7.5v.5"/></svg>
+          Sobre
+        </a>
+        <a href="#empresas" class="nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.5 0 4.5 2 4.5 5"/></svg>
+          Empresas
+        </a>
+        <a href="#estudantes" class="nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg>
+          Estudantes
+        </a>
+      </nav>
+
+      <form class="search" role="search">
+        <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input class="search__input" type="search" placeholder="Buscar oportunidades, cursos ou empresas..." aria-label="Buscar">
+      </form>
+
+      <a href="#" class="btn-login">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7"/></svg>
+        Entrar
+      </a>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow">Conectando estudantes das ETEs</p>
+        <h1 class="hero__title">
+          Seu futuro profissional
+          <span class="hero__title--blue">começa aqui.</span>
+        </h1>
+        <p class="hero__text">
+          O Ponto ConEcTE é uma plataforma que conecta estudantes das ETEs
+          a oportunidades de emprego e empresas que valorizam novos talentos.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= CARTÕES ================= -->
+    <section class="container cards">
+
+      <article class="card card--students" id="estudantes">
+        <div class="card__image" aria-hidden="true"></div>
+        <div class="card__body">
+          <div class="card__header">
+            <span class="card__icon card__icon--blue">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg>
+            </span>
+            <span class="card__label">Para estudantes</span>
+          </div>
+          <h2 class="card__title">Construa seu perfil,<br>conquiste oportunidades.</h2>
+          <p class="card__text">Cadastre suas habilidades, encontre vagas e acompanhe seu processo seletivo em um só lugar.</p>
+          <a href="#" class="btn btn--blue">
+            Quero ser estudante
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+      <article class="card card--companies" id="empresas">
+        <div class="card__image" aria-hidden="true"></div>
+        <div class="card__body">
+          <div class="card__header">
+            <span class="card__icon card__icon--green">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/><path d="M10 21v-3h4v3"/></svg>
+            </span>
+            <span class="card__label">Para empresas</span>
+          </div>
+          <h2 class="card__title">Encontre talentos<br>com o potencial que você precisa.</h2>
+          <p class="card__text">Divulgue suas vagas, conecte-se com estudantes qualificados e fortaleça o futuro do mercado de trabalho.</p>
+          <a href="#" class="btn btn--green">
+            Quero ser empresa
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ================= SOBRE NÓS ================= -->
+    <section class="about" id="sobre">
+      <div class="container about__container">
+
+        <div class="about__intro">
+          <p class="about__eyebrow">Sobre nós</p>
+          <h2 class="about__title">
+            Mais que uma plataforma,
+            <span class="about__title--blue">uma ponte para o futuro.</span>
+          </h2>
+          <p class="about__text">
+            O Ponto ConEcTE nasceu para transformar o acesso ao mercado de trabalho,
+            aproximando estudantes das ETEs de empresas comprometidas com o
+            desenvolvimento de novos talentos.
+          </p>
+        </div>
+
+        <ul class="features">
+          <li class="feature">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3"/><circle cx="5" cy="10" r="2.2"/><circle cx="19" cy="10" r="2.2"/><path d="M7 20c0-3 2-5 5-5s5 2 5 5"/><path d="M1.5 18c0-2.2 1.3-3.8 3.5-4"/><path d="M22.5 18c0-2.2-1.3-3.8-3.5-4"/></svg>
+            </span>
+            <h3 class="feature__title">Conexão real</h3>
+            <p class="feature__text">Unimos estudantes e empresas em um só lugar.</p>
+          </li>
+          <li class="feature">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5"/><path d="M12 12l8-8"/></svg>
+            </span>
+            <h3 class="feature__title">Mais oportunidades</h3>
+            <p class="feature__text">Ampliamos o acesso a vagas e programas de capacitação.</p>
+          </li>
+          <li class="feature">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M8.5 12l2.5 2.5 4.5-5"/></svg>
+            </span>
+            <h3 class="feature__title">Inclusão</h3>
+            <p class="feature__text">Valorizamos a diversidade e garantimos oportunidades para todos.</p>
+          </li>
+          <li class="feature">
+            <span class="feature__icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+            </span>
+            <h3 class="feature__title">Crescimento</h3>
+            <p class="feature__text">Apoiamos o desenvolvimento profissional e o fortalecimento da economia.</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer class="footer">
+    <div class="container footer__top">
+
+      <a href="#" class="logo logo--footer" aria-label="Ponto ConEcTE - página inicial">
+        <svg class="logo__icon" viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
+          <path d="M26 56V28l3-6h6l3 6v28"/>
+          <path d="M27 22v-6h10v6"/>
+          <path d="M29 16l3-6 3 6"/>
+          <path d="M26 36h12M26 46h12"/>
+          <path d="M14 56V40l5-4 5 4v16"/>
+          <path d="M42 56V42l5-3 5 3v14"/>
+          <path d="M4 60c6 0 6-3 12-3s6 3 12 3 6-3 12-3 6 3 12 3 6-3 8-3"/>
+          <path d="M48 8l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="#ffc83d" stroke="none"/>
+        </svg>
+        <span class="logo__text">
+          <span class="logo__name">Ponto</span>
+          <span class="logo__name logo__name--blue">ConEcTE</span>
+          <span class="logo__slogan">Da formação à oportunidade</span>
+        </span>
+      </a>
+
+      <nav class="footer__nav" aria-label="Navegação do rodapé">
+        <a href="#">Início</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#empresas">Empresas</a>
+        <a href="#estudantes">Estudantes</a>
+      </nav>
+
+      <a href="mailto:pontoconecte@gmail.com" class="footer__mail">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        pontoconecte@gmail.com
+      </a>
+
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" class="fill"/><path d="M10 9.5v5l4.5-2.5z" class="cut"/></svg>
+        </a>
+      </div>
+
+      <p class="footer__slogan">Juntos por um futuro<br>com mais oportunidades.</p>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-content">
+        <p>© 2025 Ponto ConEcTE. Todos os direitos reservados.</p>
+        <nav class="footer__legal" aria-label="Links legais">
+          <a href="#">Termos de uso</a>
+          <a href="#">Política de privacidade</a>
+          <a href="#">Fale conosco</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
