@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ponto ConEcTE - Feed da Comunidade</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/feed.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!--  CABEÇALHO  -->
+  <header class="header">
+    <div class="header__container">
+
+      <a href="index.html" class="logo" aria-label="Ponto ConEcTE - página inicial">
+        <img src="images/logofarol.png" alt="Ponto ConEcTE" class="logo__icon">
+        <span class="logo__text">
+          <span class="logo__name">Ponto</span>
+          <span class="logo__name logo__name--blue">ConEcTE</span>
+          <span class="logo__slogan">Da formação à oportunidade</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>
+          Início
+        </a>
+        <a href="#" class="nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
+          Oportunidades
+        </a>
+        <a href="#" class="nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7"/></svg>
+          Meu Perfil
+        </a>
+        <a href="#" class="nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg>
+          Cursos
+        </a>
+      </nav>
+
+      <form class="search" role="search">
+        <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input class="search__input" type="search" placeholder="Buscar publicações, tópicos, pessoas..." aria-label="Buscar">
+      </form>
+
+      <div class="user">
+        <button class="user__bell" type="button" aria-label="Notificações (1 nova)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9a6 6 0 0 1 12 0c0 6 2 7 2 7H4s2-1 2-7"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+          <span class="user__dot" aria-hidden="true"></span>
+        </button>
+        <button class="user__menu" type="button" aria-label="Menu do usuário">
+          <img src="images/perfil.webp" alt="" class="user__photo">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!--  CORPO DA PÁGINA  -->
+  <div class="layout">
+
+    <!--  MENU LATERAL  -->
+    <aside class="sidebar">
+
+      <nav class="sidebar__nav" aria-label="Menu do estudante">
+        <a href="#" class="sidebar__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>
+          Início
+        </a>
+        <a href="#" class="sidebar__link sidebar__link--active" aria-current="page">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/><circle class="cut" cx="8.5" cy="12" r="1"/><circle class="cut" cx="12" cy="12" r="1"/><circle class="cut" cx="15.5" cy="12" r="1"/></svg>
+          Publicações
+        </a>
+        <a href="#" class="sidebar__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
+          Oportunidades
+        </a>
+        <a href="#" class="sidebar__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7"/></svg>
+          Meu Perfil
+        </a>
+        <a href="#" class="sidebar__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg>
+          Cursos
+        </a>
+        <a href="#" class="sidebar__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+          Favoritos
+        </a>
+        <a href="#" class="sidebar__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+          Configurações
+        </a>
+      </nav>
+
+      <section class="sidebar__promo">
+        <svg class="sidebar__promo-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1z"/><path d="M15 9a4 4 0 0 1 0 6"/><path d="M17.5 6.5a7 7 0 0 1 0 11"/></svg>
+        <h2 class="sidebar__promo-title">Compartilhe suas ideias, tire dúvidas e faça parte da comunidade ConEcTE!</h2>
+        <p class="sidebar__promo-text">Juntos, construímos<br>mais oportunidades.</p>
+      </section>
+
+    </aside>
+
+    <!--  FEED  -->
+    <main class="feed">
+
+      <!-- Banner -->
+      <section class="feed__banner">
+        <div class="feed__banner-text">
+          <h1 class="feed__banner-title">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M4 4h16a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H11l-5 4v-4H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z"/><path class="cut-line" d="M6.5 9h11M6.5 12.5h7"/></svg>
+            Publicações
+          </h1>
+          <p class="feed__banner-desc">
+            Conecte-se com estudantes, empresas e instituições.<br>
+            Compartilhe experiências, tire dúvidas e descubra novas oportunidades.
+          </p>
+        </div>
+
+        <svg class="feed__banner-art" viewBox="0 0 160 100" aria-hidden="true">
+          <rect x="6" y="38" width="48" height="36" rx="10"/>
+          <path d="M16 74l-2 12 14-12"/>
+          <path d="M18 54h8M18 62h16"/>
+          <rect x="70" y="8" width="76" height="56" rx="16"/>
+          <path d="M120 64l10 24-2-24"/>
+          <circle cx="94" cy="36" r="2" class="fill"/>
+          <circle cx="108" cy="36" r="2" class="fill"/>
+          <circle cx="122" cy="36" r="2" class="fill"/>
+        </svg>
+      </section>
+
+      <!-- Busca e filtros -->
+      <div class="feed__toolbar">
+        <form class="feed__search" role="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+          <input type="search" placeholder="Buscar por tópicos, cursos, empresas ou pessoas..." aria-label="Buscar no feed">
+        </form>
+
+        <div class="filters" role="group" aria-label="Filtrar publicações">
+          <button type="button" class="chip chip--active" aria-pressed="true">Todas</button>
+          <button type="button" class="chip" aria-pressed="false">Estudantes</button>
+          <button type="button" class="chip" aria-pressed="false">Empresas</button>
+          <button type="button" class="chip" aria-pressed="false">Instituições</button>
+        </div>
+      </div>
+
+      <!-- Publicação 1 -->
+      <article class="post">
+        <header class="post__header">
+          <img src="images/avatar-joao.jpg" alt="" class="post__avatar">
+          <div class="post__meta">
+            <p class="post__author">Estudante <span class="post__org">· ETE Porto Digital</span></p>
+            <p class="post__handle">@joaopedro_silva · 2h</p>
+          </div>
+          <button type="button" class="post__more" aria-label="Mais opções">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle class="fill" cx="5" cy="12" r="1.6"/><circle class="fill" cx="12" cy="12" r="1.6"/><circle class="fill" cx="19" cy="12" r="1.6"/></svg>
+          </button>
+        </header>
+
+        <div class="post__headline">
+          <span class="tag tag--blue">Dúvida</span>
+          <h2 class="post__title">Como montar um bom portfólio mesmo sem experiência profissional?</h2>
+        </div>
+
+        <p class="post__text">
+          Fala, galera! Tô no 2º ano do curso de Desenvolvimento de Sistemas e queria saber
+          como vocês montaram o portfólio de vocês. Tenho alguns projetos da escola, mas não sei
+          se isso é suficiente ou se preciso fazer mais coisas. Alguma dica?
+        </p>
+
+        <footer class="post__actions">
+          <button type="button" class="action">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+            42
+          </button>
+          <button type="button" class="action">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+            18
+          </button>
+          <button type="button" class="action action--ghost">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+            Salvar
+          </button>
+          <time class="post__time">2h atrás</time>
+        </footer>
+      </article>
+
+      <!-- Publicação 2 -->
+      <article class="post">
+        <header class="post__header">
+          <span class="post__avatar post__avatar--icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/><path d="M10 21v-3h4v3"/></svg>
+          </span>
+          <div class="post__meta">
+            <p class="post__author">Empresa <span class="post__org">· TechSolutions</span></p>
+            <p class="post__handle">@techsolutions · 5h</p>
+          </div>
+          <button type="button" class="post__more" aria-label="Mais opções">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle class="fill" cx="5" cy="12" r="1.6"/><circle class="fill" cx="12" cy="12" r="1.6"/><circle class="fill" cx="19" cy="12" r="1.6"/></svg>
+          </button>
+        </header>
+
+        <div class="post__headline">
+          <span class="tag tag--green">Oportunidade</span>
+          <h2 class="post__title">Pesquisa de mercado: quais tecnologias vocês mais dominam?</h2>
+        </div>
+
+        <p class="post__text">
+          Estamos em busca de jovens talentos para um projeto de automação e queremos entender
+          quais ferramentas e linguagens vocês mais utilizam no dia a dia. Contem pra gente!
+        </p>
+
+        <footer class="post__actions">
+          <button type="button" class="action">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+            27
+          </button>
+          <button type="button" class="action">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+            12
+          </button>
+          <button type="button" class="action action--ghost">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+            Salvar
+          </button>
+          <time class="post__time">5h atrás</time>
+        </footer>
+      </article>
+
+      <!-- Publicação 3 -->
+      <article class="post">
+        <header class="post__header">
+          <img src="images/avatar-maria.jpg" alt="" class="post__avatar">
+          <div class="post__meta">
+            <p class="post__author">Estudante <span class="post__org">· ETE</span></p>
+            <p class="post__handle">@maria.santos · 8h</p>
+          </div>
+          <button type="button" class="post__more" aria-label="Mais opções">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle class="fill" cx="5" cy="12" r="1.6"/><circle class="fill" cx="12" cy="12" r="1.6"/><circle class="fill" cx="19" cy="12" r="1.6"/></svg>
+          </button>
+        </header>
+
+        <div class="post__headline">
+          <span class="tag tag--blue">Compartilhamento</span>
+          <h2 class="post__title">Participei do meu primeiro hackathon!</h2>
+        </div>
+
+        <p class="post__text">
+          Foi uma experiência incrível! Aprendi muito sobre trabalho em equipe e desenvolvimento
+          rápido. A gente criou um protótipo de app para ajudar na organização de eventos da escola.
+          Se alguém tiver interesse, posso compartilhar o repositório aqui!
+        </p>
+
+        <footer class="post__actions">
+          <button type="button" class="action">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5"/><path d="M5 12l7-7 7 7"/></svg>
+            64
+          </button>
+          <button type="button" class="action">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/></svg>
+            7
+          </button>
+          <button type="button" class="action action--ghost">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+            Salvar
+          </button>
+          <time class="post__time">8h atrás</time>
+        </footer>
+      </article>
+
+      <!-- Publicação 4 (no modelo ela aparece cortada) -->
+      <article class="post">
+        <header class="post__header">
+          <span class="post__avatar post__avatar--icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><rect x="5" y="3" width="14" height="18" rx="1"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/><path d="M10 21v-3h4v3"/></svg>
+          </span>
+          <div class="post__meta">
+            <p class="post__author">Instituição <span class="post__org">· ETE Recife</span></p>
+            <p class="post__handle">@eterecife · 10h</p>
+          </div>
+          <button type="button" class="post__more" aria-label="Mais opções">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle class="fill" cx="5" cy="12" r="1.6"/><circle class="fill" cx="12" cy="12" r="1.6"/><circle class="fill" cx="19" cy="12" r="1.6"/></svg>
+          </button>
+        </header>
+
+        <div class="post__headline">
+          <span class="tag tag--purple">Evento</span>
+          <h2 class="post__title">Semana de Tecnologia e Inovação da ETE Recife</h2>
+        </div>
+      </article>
+
+    </main>
+
+    <!--  COLUNA DA DIREITA  -->
+    <aside class="side">
+
+      <!-- Em alta -->
+      <section class="widget">
+        <header class="widget__header">
+          <h2 class="widget__title">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path class="fill" d="M12 2c1 4 5 5.5 5 10a5 5 0 0 1-10 0c0-2 1-3 2-4 0 2 1 3 2 3 0-3-1-5 1-9z"/></svg>
+            Em alta agora
+          </h2>
+          <a href="#" class="widget__link">
+            Ver mais
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </header>
+
+        <ol class="trending">
+          <li class="trending__item">
+            <span class="trending__number">1</span>
+            <a href="#" class="trending__info">
+              <strong>Estágios e Jovem Aprendiz</strong>
+              <span>12,4k publicações</span>
+            </a>
+          </li>
+          <li class="trending__item">
+            <span class="trending__number">2</span>
+            <a href="#" class="trending__info">
+              <strong>Tecnologia e Programação</strong>
+              <span>9,8k publicações</span>
+            </a>
+          </li>
+          <li class="trending__item">
+            <span class="trending__number">3</span>
+            <a href="#" class="trending__info">
+              <strong>Dúvidas sobre cursos técnicos</strong>
+              <span>7,3k publicações</span>
+            </a>
+          </li>
+          <li class="trending__item">
+            <span class="trending__number">4</span>
+            <a href="#" class="trending__info">
+              <strong>Currículo e Entrevistas</strong>
+              <span>5,6k publicações</span>
+            </a>
+          </li>
+          <li class="trending__item">
+            <span class="trending__number">5</span>
+            <a href="#" class="trending__info">
+              <strong>Eventos e Hackathons</strong>
+              <span>4,1k publicações</span>
+            </a>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Tópicos populares -->
+      <section class="widget">
+        <header class="widget__header">
+          <h2 class="widget__title">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9h14"/><path d="M5 15h14"/><path d="M10 3L8 21"/><path d="M16 3l-2 18"/></svg>
+            Tópicos populares
+          </h2>
+          <a href="#" class="widget__link">
+            Ver mais
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+        </header>
+
+        <ul class="topics">
+          <li><a href="#" class="topic">#estágio</a></li>
+          <li><a href="#" class="topic">#primeiroemprego</a></li>
+          <li><a href="#" class="topic">#tecnologia</a></li>
+          <li><a href="#" class="topic">#desenvolvimentodesistemas</a></li>
+          <li><a href="#" class="topic">#marketing</a></li>
+          <li><a href="#" class="topic">#dados</a></li>
+          <li><a href="#" class="topic">#hackathon</a></li>
+          <li><a href="#" class="topic">#currículo</a></li>
+        </ul>
+      </section>
+
+      <!-- Compartilhe -->
+      <section class="widget widget--share">
+        <h2 class="widget__title">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>
+          Compartilhe sua experiência!
+        </h2>
+        <p class="widget__text">
+          Sua história pode inspirar outros estudantes e ajudar empresas a encontrar novos talentos.
+        </p>
+        <a href="#" class="btn-post">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg>
+          Criar publicação
+        </a>
+      </section>
+
+    </aside>
+
+  </div>
+
+  <!--  RODAPÉ  -->
+  <footer class="footer">
+    <div class="container footer__top">
+
+      <a href="index.html" class="logo logo--footer" aria-label="Ponto ConEcTE - página inicial">
+        <img src="images/logofarol.png" alt="Ponto ConEcTE" class="logo__icon">
+        <span class="logo__text">
+          <span class="logo__name">Ponto</span>
+          <span class="logo__name logo__name--blue">ConEcTE</span>
+          <span class="logo__slogan">Da formação à oportunidade</span>
+        </span>
+      </a>
+
+      <nav class="footer__nav" aria-label="Navegação do rodapé">
+        <a href="estudantes.html">Início</a>
+        <a href="#vagas">Oportunidades</a>
+        <a href="index.html#sobre">Sobre nós</a>
+        <a href="index.html#estudantes">Estudantes</a>
+      </nav>
+
+      <a href="mailto:contato@pontoconecte.com" class="footer__mail">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        contato@pontoconecte.com
+      </a>
+
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" class="fill"/><path d="M10 9.5v5l4.5-2.5z" class="cut"/></svg>
+        </a>
+      </div>
+
+      <p class="footer__slogan">Juntos por um futuro<br>com mais oportunidades.</p>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-content">
+        <p>© 2025 Ponto ConEcTE. Todos os direitos reservados.</p>
+        <nav class="footer__legal" aria-label="Links legais">
+          <a href="#">Termos de uso</a>
+          <a href="#">Política de privacidade</a>
+          <a href="#">Fale conosco</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
