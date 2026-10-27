@@ -22,7 +22,7 @@
     --container: 1420px;
   }
   
-  /* ---------- Reset básico ---------- */
+  /*  Reset básico  */
   *,
   *::before,
   *::after {
@@ -48,7 +48,7 @@
     list-style: none;
   }
   
-  /* Ícones SVG: estilo padrão (linha) */
+  /* Ícones SVG: estilo padrão */
   svg {
     fill: none;
     stroke: currentColor;
@@ -64,9 +64,7 @@
     padding: 0 60px;
   }
   
-  /* =========================================================
-     CABEÇALHO
-     ========================================================= */
+  /* CABEÇALHO */
   .header {
     background: var(--navy-900);
     height: 94px;
@@ -92,8 +90,8 @@
   }
   
   .logo__icon {
-    width: 10px;
-    height: 10px;
+    width: 80px;
+    height: 80px;
     object-fit: contain
   }
   
@@ -221,41 +219,46 @@
     background: var(--green-600);
   }
   
-  /* =========================================================
-     HERO
-     ========================================================= */
-  .hero {
+  /* HERO */
+  .hero-section {
     position: relative;
+    isolation: isolate;
     overflow: hidden;
-    padding: 36px 0 22px;
-    background: linear-gradient(180deg, #ffffff 0%, #eef5ff 100%);
-  }
+    background: linear-gradient(
+    110deg,
+    #f7faff 0%,
+    #eaf3ff 55%,
+    #d9eaff 100%);
   
-  /* Fundo decorativo: farol e ondas (troque pela imagem real) */
+}
+  
+  /* Fundo decorativo: farol e ondas  */
   .hero__bg {
     position: absolute;
     inset: 0;
-    background-image: url("images/farol-fundo.jpeg");
+    background-image: url("../images/farol-fundo.jpeg");
     background-repeat: no-repeat;
-    background-position: right bottom;
-    background-size: contain;
-    opacity: 0.9;
+    background-position: right center;
+    background-size: auto 100%;
+    opacity: 0.45;
     pointer-events: none;
+    z-index: -1;
   }
   
   .hero__bg::before {
     content: "";
     position: absolute;
     right: -10%;
-    bottom: -60%;
+    bottom: -30%;
     width: 70%;
-    height: 130%;
+    height: 100%;
     border-radius: 50%;
     background: rgba(140, 185, 255, 0.18);
   }
   
   .hero__content {
     position: relative;
+    z-index: 1;
     padding-left: 85px;
   }
   
@@ -289,9 +292,7 @@
     color: var(--text-dark);
   }
   
-  /* =========================================================
-     CARTÕES
-     ========================================================= */
+  /* CARTÕES */
   .cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -321,7 +322,7 @@
     background: linear-gradient(100deg, #064c94 0%, #08709e 50%, #0a7c9c 100%);
   }
   
-  /* Imagem à direita (substitua pelas fotos reais) */
+  /* Imagem à direita */
   .card__image {
     position: absolute;
     top: 0;
@@ -334,13 +335,13 @@
   }
   
   .card--students .card__image {
-    background-image: url("images/estudante.jpg");
+    background-image: url("../images/estudante.jpg");
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
     mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
   }
   
   .card--companies .card__image {
-    background-image: url("images/empresa.jpg");
+    background-image: url("../images/empresa.jpg");
     -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
     mask-image: linear-gradient(90deg, transparent 0%, #000 45%);
   }
@@ -440,9 +441,7 @@
     background: var(--green-500);
   }
   
-  /* =========================================================
-     SOBRE NÓS
-     ========================================================= */
+  /* SOBRE NÓS */
   .about {
     background: linear-gradient(180deg, #f1f7ff 0%, #eaf3ff 100%);
     padding: 24px 0 24px;
@@ -484,7 +483,7 @@
     line-height: 1.55;
   }
   
-  /* Itens (4 colunas) */
+  /* Itens */
   .features {
     display: contents;
   }
@@ -533,9 +532,7 @@
     color: var(--text-muted);
   }
   
-  /* =========================================================
-     RODAPÉ
-     ========================================================= */
+  /* RODAPÉ */
   .footer {
     background: var(--navy-900);
     color: var(--white);
@@ -671,9 +668,7 @@
     padding-right: 0;
   }
   
-  /* =========================================================
-     RESPONSIVO
-     ========================================================= */
+  /* RESPONSIVO */
   
   /* Notebooks pequenos / tablets grandes */
   @media (max-width: 1200px) {

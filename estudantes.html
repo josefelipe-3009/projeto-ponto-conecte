@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel - Ponto ConEcTE</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/aluno.css">
+</head>
+
+<body>
+
+  <!--  CABEÇALHO  -->
+  <header class="header">
+    <div class="header__container">
+
+      <a href="index.html" class="logo" aria-label="Ponto ConEcTE - página inicial">
+        <img src="images/logofarol.png" alt="Ponto ConEcTE" class="logo__icon">
+        <span class="logo__text">
+          <span class="logo__name">Ponto</span>
+          <span class="logo__name logo__name--blue">ConEcTE</span>
+          <span class="logo__slogan">Da formação à oportunidade</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="index.html" class="nav__link nav__link--active">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>
+          Início
+        </a>
+        <a href="#vagas" class="nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
+          Oportunidades
+        </a>
+        <a href="#perfil" class="nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7"/></svg>
+          Meu Perfil
+        </a>
+        <a href="#cursos" class="nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg>
+          Cursos
+        </a>
+      </nav>
+
+      <form class="search" role="search">
+        <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+        <input class="search__input" type="search" placeholder="Buscar vagas, cursos ou empresas..." aria-label="Buscar">
+      </form>
+
+      <div class="header__actions">
+        <button class="notify" type="button" aria-label="Notificações (1 nova)">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 17V11a6 6 0 0 1 12 0v6l2 2H4z"/><path d="M10 21a2 2 0 0 0 4 0"/></svg>
+          <span class="notify__dot"></span>
+        </button>
+
+        <button class="user-menu" type="button" aria-label="Menu do usuário">
+          <img src="images/perfil.webp" alt="estudante" class="user-menu__avatar">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!--  CORPO DO PAINEL  -->
+  <div class="app">
+
+    <!--  MENU LATERAL  -->
+    <aside class="sidebar">
+
+      <div class="side-profile">
+        <img src="images/perfil.webp" alt="Foto do estudante" class="side-profile__avatar">
+        <div>
+          <p class="side-profile__name">Olá, José!</p>
+          <p class="side-profile__role">Estudante da ETE</p>
+        </div>
+      </div>
+
+      <nav class="side-nav" aria-label="Menu do painel">
+        <a href="index.html" class="side-nav__link side-nav__link--active">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></svg>
+          Início
+        </a>
+        <a href="#vagas" class="side-nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M9 7V5a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/><path d="M3 13h18"/></svg>
+          Oportunidades
+        </a>
+        <a href="#perfil" class="side-nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7"/></svg>
+          Meu Perfil
+        </a>
+        <a href="#cursos" class="side-nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg>
+          Cursos
+        </a>
+        <a href="#" class="side-nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12v18l-6-4-6 4z"/></svg>
+          Favoritos
+        </a>
+        <a href="#" class="side-nav__link">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3h.1a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8v.1a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg>
+          Configurações
+        </a>
+      </nav>
+
+      <div class="side-promo">
+        <svg class="side-promo__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4l6 6"/><path d="M4 20l4-1 11-11-3-3L5 16z"/><path d="M4 20l3-3"/></svg>
+        <p class="side-promo__title">Seu futuro<br>começa com<br>uma oportunidade.</p>
+        <p class="side-promo__text">Continue se desenvolvendo<br>e conquiste o que você merece!</p>
+      </div>
+
+    </aside>
+
+    <!--  CONTEÚDO PRINCIPAL  -->
+    <main class="main">
+
+      <!--  BANNER DE BOAS-VINDAS  -->
+      <section class="welcome">
+        <div class="welcome__content">
+          <p class="welcome__eyebrow">Bem-vindo, José!</p>
+          <h1 class="welcome__title">
+            Aqui você encontra oportunidades que combinam com o
+            <span class="welcome__title--blue">seu futuro.</span>
+          </h1>
+          <p class="welcome__text">
+            Conecte seu perfil, descubra vagas, acesse cursos<br>
+            e dê o próximo passo na sua jornada profissional.
+          </p>
+
+          <ul class="welcome__features">
+            <li>
+              <span class="welcome__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>
+              </span>
+              <span>Vagas<br>exclusivas</span>
+            </li>
+            <li>
+              <span class="welcome__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.5 3 3 6 3s6-1.5 6-3v-4.5"/><path d="M22 9v6"/></svg>
+              </span>
+              <span>Cursos e<br>capacitações</span>
+            </li>
+            <li>
+              <span class="welcome__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.5 3-6 6.5-6s6.5 2.5 6.5 6"/><circle cx="17" cy="9" r="2.5"/><path d="M17 14c2.5 0 4.5 2 4.5 5"/></svg>
+              </span>
+              <span>Mentoria<br>e orientação</span>
+            </li>
+            <li>
+              <span class="welcome__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg>
+              </span>
+              <span>Seu talento<br>em destaque</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!--  BLOCOS  -->
+      <div class="blocks">
+
+        <!-- Vagas em destaque -->
+        <section class="panel panel--jobs" id="vagas">
+          <header class="panel__head">
+            <h2 class="panel__title">Vagas em destaque</h2>
+            <a href="#" class="panel__link">Ver todas
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            </a>
+          </header>
+
+          <ul class="jobs">
+            <li class="job">
+              <span class="job__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/></svg>
+              </span>
+              <div class="job__info">
+                <h3 class="job__title">Estágio em Desenvolvimento Web</h3>
+                <p class="job__company">TechSoluções</p>
+                <p class="job__meta">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                  Recife - PE
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                  Remoto <span class="job__sep">|</span> Estágio
+                </p>
+              </div>
+              <a href="#" class="btn-apply">Candidatar-se</a>
+            </li>
+
+            <li class="job">
+              <span class="job__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12"/><path d="M12 20V5"/><path d="M19 20V9"/></svg>
+              </span>
+              <div class="job__info">
+                <h3 class="job__title">Jovem Aprendiz - Administração</h3>
+                <p class="job__company">Grupo Aurora</p>
+                <p class="job__meta">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                  Olinda - PE
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                  Presencial <span class="job__sep">|</span> Aprendizagem
+                </p>
+              </div>
+              <a href="#" class="btn-apply">Candidatar-se</a>
+            </li>
+
+            <li class="job">
+              <span class="job__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="11" rx="1.5"/><path d="M2 20h20"/></svg>
+              </span>
+              <div class="job__info">
+                <h3 class="job__title">Suporte Técnico em TI</h3>
+                <p class="job__company">NorteTech</p>
+                <p class="job__meta">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                  Recife - PE
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                  Presencial <span class="job__sep">|</span> Estágio
+                </p>
+              </div>
+              <a href="#" class="btn-apply">Candidatar-se</a>
+            </li>
+
+            <li class="job">
+              <span class="job__icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="7" r="3"/><circle cx="5" cy="10" r="2.2"/><circle cx="19" cy="10" r="2.2"/><path d="M7 20c0-3 2-5 5-5s5 2 5 5"/></svg>
+              </span>
+              <div class="job__info">
+                <h3 class="job__title">Auxiliar de Produção</h3>
+                <p class="job__company">Indústria Global</p>
+                <p class="job__meta">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>
+                  Paulista - PE
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                  Presencial <span class="job__sep">|</span> CLT
+                </p>
+              </div>
+              <a href="#" class="btn-apply">Candidatar-se</a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- Coluna do meio: cursos + mensagem -->
+        <div class="blocks__middle">
+
+          <section class="panel panel--courses" id="cursos">
+            <header class="panel__head">
+              <h2 class="panel__title">Cursos recomendados</h2>
+              <a href="#" class="panel__link">Ver todos
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+              </a>
+            </header>
+
+            <ul class="courses">
+              <li class="course">
+                <span class="course__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/></svg>
+                </span>
+                <div>
+                  <h3 class="course__title">Introdução à Programação</h3>
+                  <p class="course__tags"><span>40h</span><span>Online</span><span>Gratuito</span></p>
+                </div>
+              </li>
+              <li class="course">
+                <span class="course__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V12"/><path d="M12 20V5"/><path d="M19 20V9"/></svg>
+                </span>
+                <div>
+                  <h3 class="course__title">Excel do Básico ao Avançado</h3>
+                  <p class="course__tags"><span>30h</span><span>Online</span><span>Gratuito</span></p>
+                </div>
+              </li>
+              <li class="course">
+                <span class="course__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 18a4 4 0 0 1-.5-8A6 6 0 0 1 18 9.5a4.2 4.2 0 0 1-.5 8.5z"/></svg>
+                </span>
+                <div>
+                  <h3 class="course__title">Fundamentos de Marketing Digital</h3>
+                  <p class="course__tags"><span>20h</span><span>Online</span><span>Gratuito</span></p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <aside class="talent">
+            <svg class="talent__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22V11"/><path d="M12 13C12 8 8 6 4 6c0 4 2 7 8 7z"/><path d="M12 11c0-4 3-6 8-6 0 4-2 7-8 7z"/></svg>
+            <div>
+              <p class="talent__title">Seu talento tem<br>muito valor.</p>
+              <p class="talent__text">A gente te ajuda a encontrar<br>oportunidades para ele crescer.</p>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- Seu perfil -->
+        <section class="panel panel--profile" id="perfil">
+          <header class="panel__head">
+            <h2 class="panel__title">Seu perfil</h2>
+            <a href="#" class="panel__link">Ver perfil
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            </a>
+          </header>
+
+          <div class="progress">
+            <div class="progress__ring" role="img" aria-label="Perfil 70% completo">
+              <svg viewBox="0 0 80 80" aria-hidden="true">
+                <circle class="progress__track" cx="40" cy="40" r="34"/>
+                <circle class="progress__value" cx="40" cy="40" r="34" pathLength="100" stroke-dasharray="70 100"/>
+              </svg>
+              <span class="progress__number">70%</span>
+            </div>
+            <p class="progress__text">Complete seu perfil para aumentar suas chances de ser encontrado pelas empresas.</p>
+          </div>
+
+          <ul class="checklist">
+            <li class="checklist__item checklist__item--done">
+              <span class="checklist__check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+              Dados pessoais
+            </li>
+            <li class="checklist__item checklist__item--done">
+              <span class="checklist__check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+              Formação
+            </li>
+            <li class="checklist__item checklist__item--done">
+              <span class="checklist__check"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span>
+              Habilidades
+            </li>
+            <li class="checklist__item">
+              <span class="checklist__check"></span>
+              Experiências
+              <svg class="checklist__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+            </li>
+          </ul>
+
+          <div class="tip">
+            <p class="tip__title">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 18h6"/><path d="M10 21h4"/><path d="M12 3a6 6 0 0 0-3.5 10.9c.6.5 1 1.2 1 2.1h5c0-.9.4-1.6 1-2.1A6 6 0 0 0 12 3z"/></svg>
+              Dica do dia
+            </p>
+            <p class="tip__text">Manter seu perfil atualizado aumenta em até 3x suas chances de ser chamado para uma vaga.</p>
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+
+  <!--  RODAPÉ  -->
+  <footer class="footer">
+    <div class="container footer__top">
+
+      <a href="index.html" class="logo logo--footer" aria-label="Ponto ConEcTE - página inicial">
+        <img src="images/logofarol.png" alt="Ponto ConEcTE" class="logo__icon">
+        <span class="logo__text">
+          <span class="logo__name">Ponto</span>
+          <span class="logo__name logo__name--blue">ConEcTE</span>
+          <span class="logo__slogan">Da formação à oportunidade</span>
+        </span>
+      </a>
+
+      <nav class="footer__nav" aria-label="Navegação do rodapé">
+        <a href="estudantes.html">Início</a>
+        <a href="#vagas">Oportunidades</a>
+        <a href="index.html#sobre">Sobre nós</a>
+        <a href="index.html#estudantes">Estudantes</a>
+      </nav>
+
+      <a href="mailto:contato@pontoconecte.com" class="footer__mail">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+        contato@pontoconecte.com
+      </a>
+
+      <div class="footer__social">
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" class="fill"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="4" class="fill"/><path d="M10 9.5v5l4.5-2.5z" class="cut"/></svg>
+        </a>
+      </div>
+
+      <p class="footer__slogan">Juntos por um futuro<br>com mais oportunidades.</p>
+
+    </div>
+
+    <div class="footer__bottom">
+      <div class="container footer__bottom-content">
+        <p>© 2025 Ponto ConEcTE. Todos os direitos reservados.</p>
+        <nav class="footer__legal" aria-label="Links legais">
+          <a href="#">Termos de uso</a>
+          <a href="#">Política de privacidade</a>
+          <a href="#">Fale conosco</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,777 @@
+:root {
+  --border: #e2ebf7;
+  --surface: #ffffff;
+  --green-100: #e4f7f0;
+  --green-050: #eefaf5;
+}
+
+body {
+  background: var(--white);
+}
+
+/* Ajustes do cabeçalho */
+.header__container {
+  gap: 20px;
+}
+
+.nav {
+  margin-left: 22px;
+}
+
+.search {
+  max-width: 370px;
+}
+
+.header__actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  margin-left: 20px;
+}
+
+.notify {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: grid;
+  place-items: center;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.notify svg {
+  width: 28px;
+  height: 28px;
+}
+
+.notify__dot {
+  position: absolute;
+  top: 3px;
+  right: 4px;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--green-500);
+  border: 2px solid var(--navy-900);
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.user__photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  background: var(--blue-100);
+}
+
+.user svg {
+  width: 16px;
+  height: 16px;
+}
+
+/* Estrutura do painel */
+.dashboard {
+  display: grid;
+  grid-template-columns: 308px 1fr;
+  max-width: 1536px;
+  margin: 0 auto;
+  background: var(--white);
+}
+
+/* Menu lateral */
+.sidebar {
+  padding: 24px 20px 22px 37px;
+  border-right: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.sidebar__user {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: -6px;
+}
+
+.sidebar__avatar {
+  width: 78px;
+  height: 78px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--blue-100);
+  display: grid;
+  place-items: center;
+}
+
+.sidebar__avatar img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--navy-900);
+  object-fit: contain;
+  padding: 4px;
+}
+
+.sidebar__hello {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.sidebar__sub {
+  margin-top: 2px;
+  font-size: 11.5px;
+  color: var(--text-dark);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-right: -6px;
+}
+
+.menu__link {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-dark);
+  transition: background 0.2s;
+}
+
+.menu__link svg {
+  width: 22px;
+  height: 22px;
+  color: var(--navy-900);
+}
+
+.menu__link:hover {
+  background: var(--bg-light);
+}
+
+.menu__link--active {
+  background: var(--blue-100);
+  color: var(--blue-500);
+  font-weight: 700;
+  height: 41px;
+}
+
+.menu__link--active svg {
+  color: var(--blue-500);
+}
+
+/* Cartão promocional */
+.promo {
+  position: relative;
+  flex: 1;
+  min-height: 340px;
+  margin: 4px -6px 0 0;
+  padding: 20px 18px 24px 20px;
+  border-radius: 14px;
+  overflow: hidden;
+  background:
+    url("../images/farol-fundo.jpeg") right bottom / 100% auto no-repeat,
+    linear-gradient(180deg, #e6f0ff 0%, #eef5ff 100%);
+}
+
+.promo__icon {
+  width: 34px;
+  height: 34px;
+  color: var(--blue-500);
+}
+
+.promo__title {
+  margin-top: 14px;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: var(--navy-900);
+}
+
+.promo__text {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-dark);
+}
+
+.promo__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 18px;
+  height: 36px;
+  padding: 0 22px;
+  border-radius: var(--radius-pill);
+  background: var(--navy-900);
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
+  transition: filter 0.2s, transform 0.2s;
+}
+
+.promo__btn svg {
+  width: 15px;
+  height: 15px;
+}
+
+.promo__btn:hover {
+  filter: brightness(1.25);
+  transform: translateY(-2px);
+}
+
+/* Conteúdo */
+.content {
+  padding: 22px 0 22px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  min-width: 0;
+}
+
+/* Banner */
+.banner {
+  position: relative;
+  min-height: 312px;
+  border-radius: 8px;
+  overflow: hidden;
+  color: var(--white);
+  background:
+    linear-gradient(90deg, rgba(5, 36, 100, 0.97) 0%, rgba(8, 52, 130, 0.92) 42%, rgba(8, 52, 130, 0) 72%),
+    url("../images/fundo-empresas.jpg") right center / cover no-repeat,
+    var(--navy-800);
+}
+
+.banner__body {
+  max-width: 640px;
+  padding: 24px 38px 26px;
+}
+
+.banner__eyebrow {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #b9d3ff;
+}
+
+.banner__title {
+  margin-top: 12px;
+  max-width: 440px;
+  font-size: 32px;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+}
+
+.banner__title span {
+  color: #2f8cff;
+}
+
+.banner__text {
+  margin-top: 14px;
+  max-width: 330px;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+.banner__features {
+  display: flex;
+  align-items: center;
+  margin-top: 24px;
+  margin-left: -4px;
+}
+
+.banner__features li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 22px;
+  border-left: 1px solid rgba(255, 255, 255, 0.28);
+  font-size: 11.5px;
+  font-weight: 600;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+.banner__features li:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.banner__feat-icon {
+  width: 46px;
+  height: 46px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--blue-600);
+  display: grid;
+  place-items: center;
+}
+
+.banner__feat-icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* Grade de cartões */
+.grid {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr 0.78fr;
+  gap: 20px;
+  align-items: start;
+}
+
+.col-middle {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.panel {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 20px 22px;
+}
+
+.panel__head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.panel__title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.panel__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  font-weight: 600;
+  color: var(--blue-500);
+}
+
+.panel__link svg {
+  width: 14px;
+  height: 14px;
+}
+
+.panel__link--small {
+  font-size: 11px;
+}
+
+.panel__link:hover {
+  text-decoration: underline;
+}
+
+/* Vagas */
+.jobs {
+  margin-top: 14px;
+  border-top: 1px solid var(--border);
+}
+
+.job {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 0;
+}
+
+.job + .job {
+  border-top: 1px solid transparent;
+}
+
+.job__icon {
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--navy-900);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+}
+
+.job__icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.job__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.job__title {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.job__company {
+  margin-top: 2px;
+  font-size: 11.5px;
+  color: var(--text-muted);
+}
+
+.job__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 6px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.job__meta span {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 0 12px;
+  border-left: 1px solid #c9d6ea;
+}
+
+.job__meta span:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.job__meta svg {
+  width: 13px;
+  height: 13px;
+}
+
+.job__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  flex-shrink: 0;
+  width: 103px;
+  height: 30px;
+  border-radius: var(--radius-pill);
+  background: var(--green-500);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.job__btn svg {
+  width: 12px;
+  height: 12px;
+}
+
+.job__btn:hover {
+  background: var(--green-600);
+}
+
+/* Dados que importam */
+.stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.stat {
+  position: relative;
+  padding: 14px 14px 12px;
+  border-radius: 8px;
+  background: var(--bg-light);
+  display: flex;
+  flex-direction: column;
+}
+
+.stat svg {
+  width: 24px;
+  height: 24px;
+  color: var(--blue-500);
+}
+
+.stat strong {
+  margin-top: 6px;
+  font-size: 20px;
+  font-weight: 800;
+  color: var(--blue-500);
+  line-height: 1.2;
+}
+
+.stat span {
+  margin-top: 2px;
+  font-size: 10.5px;
+  line-height: 1.3;
+  color: var(--text-muted);
+}
+
+/* Mais inclusão */
+.inclusion {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 22px 22px;
+  border-radius: 8px;
+  background: var(--green-100);
+}
+
+.inclusion__icon {
+  width: 52px;
+  height: 66px;
+  flex-shrink: 0;
+  color: var(--green-500);
+  stroke-width: 3;
+}
+
+.inclusion__title {
+  font-size: 16.5px;
+  line-height: 1.25;
+  font-weight: 800;
+  color: #0c5c4a;
+}
+
+.inclusion__text {
+  margin-top: 8px;
+  font-size: 12.5px;
+  line-height: 1.45;
+  color: #11806a;
+}
+
+/* Seu perfil */
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.profile__avatar {
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  background: var(--navy-900);
+  display: grid;
+  place-items: center;
+}
+
+.profile__avatar img {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.profile__name {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.profile__status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 3px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+
+.check {
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+}
+
+.check__bg {
+  fill: var(--green-500);
+  stroke: none;
+}
+
+.check__mark {
+  stroke: var(--white);
+  stroke-width: 3;
+}
+
+.profile__links {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 16px;
+}
+
+.profile__links a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 31px;
+  font-size: 12px;
+  color: var(--text-dark);
+}
+
+.profile__links a > svg:first-child {
+  width: 18px;
+  height: 18px;
+  color: var(--navy-900);
+}
+
+.profile__links a:hover {
+  color: var(--blue-500);
+}
+
+
+.tip {
+  margin-top: 16px;
+  padding: 14px 14px 16px;
+  border-radius: 8px;
+  background: var(--blue-100);
+}
+
+.tip__title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  color: var(--navy-900);
+}
+
+.tip__title svg {
+  width: 20px;
+  height: 20px;
+  color: var(--blue-500);
+}
+
+.tip__text {
+  margin-top: 8px;
+  padding-left: 30px;
+  font-size: 11px;
+  line-height: 1.5;
+  color: var(--blue-600);
+}
+
+/* Rodapé  */
+.footer {
+  margin-top: 0;
+}
+
+/*RESPONSIVO*/
+@media (max-width: 1350px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .panel--jobs {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header__actions {
+    margin-left: auto;
+  }
+
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 30px;
+  }
+
+  .promo {
+    display: none;
+  }
+
+  .menu {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-right: 0;
+  }
+
+  .content {
+    padding: 22px 30px;
+  }
+}
+
+@media (max-width: 900px) {
+  .banner {
+    background:
+      linear-gradient(90deg, rgba(5, 36, 100, 0.95), rgba(8, 52, 130, 0.85)),
+      url("../images/fundo-empresas.jpg") right center / cover no-repeat,
+      var(--navy-800);
+  }
+
+  .banner__features {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .banner__features li {
+    border-left: none;
+    padding: 0;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content {
+    padding: 22px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .banner__title {
+    font-size: 26px;
+  }
+
+  .banner__body {
+    padding: 22px 22px 26px;
+  }
+
+  .job {
+    flex-wrap: wrap;
+  }
+
+  .job__btn {
+    margin-left: 72px;
+  }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    padding: 20px 16px;
+  }
+
+  .menu__link {
+    flex: 1 1 45%;
+  }
+}

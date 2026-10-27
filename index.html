@@ -4,27 +4,19 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ponto ConEcTE - Da formação à oportunidade</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-  <!-- ================= CABEÇALHO ================= -->
+  <!--  CABEÇALHO  -->
   <header class="header">
     <div class="header__container">
 
-      <a href="#" class="logo" aria-label="Ponto ConEcTE - página inicial">
-        <!-- Troque este SVG por <img src="images/logo.png" alt="Ponto ConEcTE"> se tiver o arquivo original -->
-       <img>
-          <path d="M26 56V28l3-6h6l3 6v28"/>
-          <path d="M27 22v-6h10v6"/>
-          <path d="M29 16l3-6 3 6"/>
-          <path d="M26 36h12M26 46h12"/>
-          <path d="M14 56V40l5-4 5 4v16"/>
-          <path d="M42 56V42l5-3 5 3v14"/>
-          <path d="M4 60c6 0 6-3 12-3s6 3 12 3 6-3 12-3 6 3 12 3 6-3 8-3"/>
-          <path class="logo__star" d="M48 8l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="#ffc83d" stroke="none"/>
-        </svg>
+      <a href="index.html" class="logo" aria-label="Ponto ConEcTE - página inicial">
+        
+       <img src ="images/logofarol.png" alt="Ponto ConEcTE" class="logo__icon">
+          
         <span class="logo__text">
           <span class="logo__name">Ponto</span>
           <span class="logo__name logo__name--blue">ConEcTE</span>
@@ -56,7 +48,7 @@
         <input class="search__input" type="search" placeholder="Buscar oportunidades, cursos ou empresas..." aria-label="Buscar">
       </form>
 
-      <a href="#" class="btn-login">
+      <a href="login.html" class="btn-login">
         <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.5 3.5-7 8-7s8 2.5 8 7"/></svg>
         Entrar
       </a>
@@ -66,11 +58,11 @@
 
   <main>
 
-    <!-- ================= HERO ================= -->
+    <!--  HERO  -->
     <section class="hero">
       <div class="hero__bg" aria-hidden="true"></div>
       <div class="container hero__content">
-        <p class="hero__eyebrow">Conectando estudantes das ETEs</p>
+       <br><br> <p class="hero__eyebrow">Conectando estudantes das ETEs</p>
         <h1 class="hero__title">
           Seu futuro profissional
           <span class="hero__title--blue">começa aqui.</span>
@@ -79,10 +71,11 @@
           O Ponto ConEcTE é uma plataforma que conecta estudantes das ETEs
           a oportunidades de emprego e empresas que valorizam novos talentos.
         </p>
+        <br><br>
       </div>
     </section>
 
-    <!-- ================= CARTÕES ================= -->
+    <!--  CARTÕES  -->
     <section class="container cards">
 
       <article class="card card--students" id="estudantes">
@@ -96,7 +89,7 @@
           </div>
           <h2 class="card__title">Construa seu perfil,<br>conquiste oportunidades.</h2>
           <p class="card__text">Cadastre suas habilidades, encontre vagas e acompanhe seu processo seletivo em um só lugar.</p>
-          <a href="#" class="btn btn--blue">
+          <a href="cadastro-estudante.html" class="btn btn--blue">
             Quero ser estudante
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
           </a>
@@ -114,7 +107,7 @@
           </div>
           <h2 class="card__title">Encontre talentos<br>com o potencial que você precisa.</h2>
           <p class="card__text">Divulgue suas vagas, conecte-se com estudantes qualificados e fortaleça o futuro do mercado de trabalho.</p>
-          <a href="#" class="btn btn--green">
+          <a href="cadastro-empresa.html" class="btn btn--green">
             Quero ser empresa
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
           </a>
@@ -123,7 +116,7 @@
 
     </section>
 
-    <!-- ================= SOBRE NÓS ================= -->
+    <!--  SOBRE NÓS  -->
     <section class="about" id="sobre">
       <div class="container about__container">
 
@@ -176,21 +169,12 @@
 
   </main>
 
-  <!-- ================= RODAPÉ ================= -->
+  <!--  RODAPÉ  -->
   <footer class="footer">
     <div class="container footer__top">
 
       <a href="#" class="logo logo--footer" aria-label="Ponto ConEcTE - página inicial">
-        <svg class="logo__icon" viewBox="0 0 64 64" fill="none" stroke="#fff" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" aria-hidden="true">
-          <path d="M26 56V28l3-6h6l3 6v28"/>
-          <path d="M27 22v-6h10v6"/>
-          <path d="M29 16l3-6 3 6"/>
-          <path d="M26 36h12M26 46h12"/>
-          <path d="M14 56V40l5-4 5 4v16"/>
-          <path d="M42 56V42l5-3 5 3v14"/>
-          <path d="M4 60c6 0 6-3 12-3s6 3 12 3 6-3 12-3 6 3 12 3 6-3 8-3"/>
-          <path d="M48 8l2 4 4 2-4 2-2 4-2-4-4-2 4-2z" fill="#ffc83d" stroke="none"/>
-        </svg>
+        <img src ="images/logofarol.png" alt="Ponto ConEcTE" class="logo__icon">
         <span class="logo__text">
           <span class="logo__name">Ponto</span>
           <span class="logo__name logo__name--blue">ConEcTE</span>
