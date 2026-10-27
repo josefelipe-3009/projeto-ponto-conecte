@@ -21,6 +21,7 @@ O projeto está sendo desenvolvido na ETE Porto Digital e tem como referência o
 
 - HTML5
 - CSS3
+- Figma
 
 ## Público-alvo
 
