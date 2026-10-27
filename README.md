@@ -21,17 +21,6 @@ O projeto está sendo desenvolvido na ETE Porto Digital e tem como referência o
 
 - HTML5
 - CSS3
-- JavaScript, caso utilizado na versão atual.
-
-## Estrutura do projeto
-
-```text
-projeto-ponto-conecte/
-├── index.html
-├── style.css
-├── images/
-└── README.md
-```
 
 ## Público-alvo
 
